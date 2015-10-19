@@ -10,22 +10,33 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-convert <- function(x, type = "EGP"){
+convert <- function(x, type = "EGP", selfEmployed = NULL, unemployed = NULL){
 	require(hash)
-	if(x %in% keys(EGPhash) == FALSE){
-		warning("One or more inputs is not a valid ISCO-88 code")
+
+	if (type == "EGP" & length(selfEmployed) !=0 & x %in% selfEmployed){
+		return(6)
+	}
+	else if (type == "EGP" & length(unemployed) !=0 & x %in% unemployed){
+		return(12)
 	}
 
-	f1 <- function(type){
+	else if(x %in% keys(ISCOhash) == FALSE){
+		warning("One or more inputs is not a valid ISCO-88 code")
+		return(NA)
+	}
+
+	else{f1 <- function(type){
 		switch(type,
-			   EGP = EGPhash[[as.character(x)]],
-			   ISEI = ISEIhash[[as.character(x)]],
-			   SIOPS = SIOPShash[[as.character(x)]]
+			   EGP = ISCOhash[[as.character(x)]]$EGP,
+			   ISEI = ISCOhash[[as.character(x)]]$ISEI,
+			   SIOPS = ISCOhash[[as.character(x)]]$SIOPS,
+			   JOB = ISCOhash[[as.character(x)]]$JobDescription
 		)
 	}
 	tmp <- unlist(f1(type))
 	if(length(tmp)==0) {return(NA)
-	}else{return(tmp)}
+	}else{return(as.numeric(tmp))}
+	}
 }
-
+#Vectorize the function to m ake it faster
 convert <- Vectorize(convert)

@@ -38,3 +38,7 @@ expect_that(con2,equals(c("999" = NA, "9" = NA)))
 context("is.isco")
 expect_true(is.isco88(1300))
 expect_false(is.isco88(900))
+
+context("ANZSCO")
+expect_that(anzscoToISCO(111399), equals(1110))
+expect_that(anzscoToISCO(621912), equals(5220))

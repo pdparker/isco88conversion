@@ -21,5 +21,5 @@ Values: ISCO 88 value
 
 \examples{
 #See what ISCO-08 codes are avaliable
-keys(ISCOh0888)
+keys(ISCO0888)
 }

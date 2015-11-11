@@ -2,10 +2,11 @@
 \alias{dominance}
 \title{Returns highest of mother and father codes}
 \usage{
-dominance(x)
+dominance(x, type)
 }
 \arguments{
 	\item{x}{A int vector of length 2}
+	\item{type}{Either 'EGP', 'ISEI', or 'SIOPS'}
 }
 
 \description{

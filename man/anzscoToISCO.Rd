@@ -1,5 +1,5 @@
-\name{ANZSCO}
-\alias{ANZSCO}
+\name{anzscoToISCO}
+\alias{anzscoToISCO}
 \title{Convert ANZSCO to ISCO-88}
 \usage{
 anzscoToISCO(x)

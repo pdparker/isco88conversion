@@ -35,7 +35,9 @@ convert <- function(x, type = "EGP", selfEmployed = NULL, unemployed = NULL){
 	}
 	tmp <- unlist(f1(type))
 	if(length(tmp)==0) {return(NA)
-	}else{return(as.numeric(tmp))}
+		}else if(type != 'JOB'){return(as.numeric(tmp))
+		}else {return(tmp)
+		}
 	}
 }
 #Vectorize the function to m ake it faster

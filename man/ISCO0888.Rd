@@ -5,6 +5,8 @@
 
 \usage{ISCO0888}
 
+\description{ISCO-08 and ISCO-88 correspondance table.}
+
 \format{A hash table with 436 Key:Value pairs}
 
 \source{
@@ -21,5 +23,5 @@ Values: ISCO 88 value
 
 \examples{
 #See what ISCO-08 codes are avaliable
-keys(ISCO0888)
+hash::keys(ISCO0888)
 }

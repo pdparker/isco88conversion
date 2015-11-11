@@ -8,5 +8,5 @@ Suggests: testthat
 Author: Philip Parker
 Maintainer: Philip Parker <philip.parker@acu.edu.au>
 Description: The package aims to provide a quick and accurate translation of ISCO 88 codes into the most common social class and ses (occupational prestige) codes. The speed comes from calling a hash table in which ISCO and output code are in a "key:value" pair.
-License: MIT + file LICENSE
+License: MIT
 LazyData: TRUE

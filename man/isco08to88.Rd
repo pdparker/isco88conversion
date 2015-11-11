@@ -2,6 +2,8 @@
 \alias{isco08to88}
 \title{Converts ISCO-08 to ISCO-88 codes.}
 
+\description{Converts ISCO-08 to ISCO-88 codes based on correspondance tables from the ABS.}
+
 \usage{isco08to88(x)}
 
 \arguments{

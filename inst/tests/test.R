@@ -34,3 +34,7 @@ expect_that(con1,equals(c("999" = NA, "9" = NA)))
 
 expect_warning(con2 <- convert(c("999","9") , type = 'SIOPS',unemployed = 999,selfEmployed = 9))
 expect_that(con2,equals(c("999" = NA, "9" = NA)))
+
+context("is.isco")
+expect_true(is.isco88(1300))
+expect_false(is.isco88(900))

@@ -1,7 +1,10 @@
 \name{ISCOhash}
 \docType{data}
 \alias{ISCOhash}
-\title{Hash table with ISCO codes as Key and correspondance values as Values}
+
+\title{ISCO-88 to ses and social class correspondance}
+
+\description{Hash table with ISCO codes as Key and correspondance values as Values}
 
 \usage{ISCOhash}
 
@@ -27,5 +30,5 @@ Given that datasets like PISA are very large as hash table is used rather than a
 
 \examples{
 #See what ISCO-88 codes are avaliable
-keys(ISCOhash)
+hash::keys(ISCOhash)
 }

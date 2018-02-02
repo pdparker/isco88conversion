@@ -30,7 +30,7 @@ text3[,1:3] <- apply(text3[,1:3], 2, function(x) as.numeric(as.character(x)))
 text3$JobDescription <- gsub("^[[:blank:]]+", "", text3$JobDescription)
 ```
 
-##Basics
+## Basics
 
 The package uses ISCO-88 as base code, with correspondence hash tables provided to get from other common codes to this base code. The main envisioned workflow is:
 
@@ -39,7 +39,7 @@ The package uses ISCO-88 as base code, with correspondence hash tables provided 
 
 For EGP it is important to note that no distinction is made between classes 3 and 4 with code 3 used as a catch all for "Routine non-manual" jobs. Likewise, ISCO-88 contains no codes for self-employed or unemployed individuals. The convert function provides an argument to provide user to provide user-defined values for self-employed and unemployed. This will return 6 (for self-employed) and 12 (for unemployed). When ISEI or SIOPS is requested, user defined values are ignored and NA is returned.
 
-##Sources
+## Sources
 
 + ISCO-88 correspondence table from [Ganzeboom's code SPSS code](http://www.harryganzeboom.nl/isco88/index.htm)
 
@@ -47,13 +47,13 @@ For EGP it is important to note that no distinction is made between classes 3 an
 
 + Correspondence table from ISCO-08 to ISCO-88
 
-##Instalation
+## Instalation
 
 ```
 library(devtools)
 install_git("https://github.com/pdparker/isco88conversion")
 ```
-##To do
+## To do
 
 + Full documentation and code cleaning
 + Adding further conversion for ABS codes including the ASEIE and ANU occupational prestige codes
